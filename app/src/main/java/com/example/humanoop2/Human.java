@@ -7,6 +7,12 @@ public class Human {
     private int age;
     private int weight;
 
+    public Human(String name, int age, int weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+
     public String getName() {
         return name;
     }
@@ -36,18 +42,20 @@ public class Human {
     public void sleep (){
         Log.d("Human", "zzzzzzzz");
     }
-    public int sleep (int sleep) {
-        Log.d("Human", "i am sleeping for x hours");
-        return sleep;
-    }
-    public String speak (String speech){
-        Log.d("Human", "I am speaking");
-        return speech;
+    public  int sleep (int hours) {
+       return  Log.d("Human", "i am sleeping for" + hours + "hours");
 
     }
-    public int birthday (int birthday){
-        age= birthday + 1;
-        return age;
+    public void speak (String speech){
+        Log.d("Human", speech);
+
+
+    }
+    public void birthday (){
+        int age = getAge();
+        age = age + 1;
+        setAge(age);
+
 
     }
 }

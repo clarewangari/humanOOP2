@@ -3,26 +3,37 @@ package com.example.humanoop2;
 import android.util.Log;
 
 public class Anna extends Human {
-    public Anna(int height) {
+    private int height;
+    public Anna(String name, int age, int weight) {
+        super(name, age, weight);
+    }
+
+    public Anna(String name, int age, int weight, int height) {
+        super(name, age, weight);
         this.height = height;
     }
 
-    private int height;
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
     @Override
-    public int getWeight() {
-        return super.getWeight();
-      //  Log.d("Human", "i am eating", one.weight + 2);
-
-
-
-    }
-    public int birthday(){
-        birthday();
-      //  getAge(age + 4);
-        return birthday();
+    public void eat() {
+        super.eat();
+        int annaWeight = getWeight();
+        annaWeight = annaWeight +2;
+        setWeight(annaWeight);
     }
 
-
+    @Override
+    public void birthday() {
+        int annaAge = getAge();
+        annaAge = annaAge + 4;
+        setAge(annaAge);
+    }
 }
 

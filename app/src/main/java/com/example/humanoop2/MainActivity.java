@@ -28,15 +28,20 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        Human one = new Human();
-        String oneName = one.getName();
-        one.sleep();
-       // int.birthday(78);
-        Log.d("Human", "new age is" + one.birthday(34));
 
-        Anna person = new Anna(120,  2, 75);
-        person.birthday();
-        person.eat();
+      Human Fred = new Human("Fred", 56, 90);
+      Fred.eat();
+      Fred.sleep();
+      Fred.sleep(8);
+      Fred.speak("I have slept enough");
+      Fred.birthday();
+      Log.d("Human", "fred's age is" + Fred.getAge());
+
+      Anna human = new Anna("Anna", 18, 65);
+      human.eat();
+      Log.d("Human", "Anna's weight is " +  human.getWeight());
+      human.birthday();
+      Log.d("Human", "Anna's age is "+ human.getAge());
 
 
 
